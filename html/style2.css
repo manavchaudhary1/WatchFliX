@@ -1,0 +1,524 @@
+/* Import Fonts */
+@font-face {font-family:'Baloo Bhai 2';src: url('fonts/BalooBhai2-VariableFont_wght.ttf');}
+@font-face {font-family: 'Yanone Kaffeesatz';src: url('fonts/YanoneKaffeesatz-VariableFont_wght.ttf');}
+
+/* All Variables */
+:root{
+    --prim-font:'Baloo Bhai 2';
+    --nav-color:rgb(25,102,211);
+    --prim-color:#272B30;
+    --text-color:#AAAAAA;
+    --nav-title-font:'Yanone Kaffeesatz';
+}
+
+/* CSS reset*/
+*{
+    margin: 0;
+    padding: 0;
+    border-style: none;
+}
+
+/* BODY */
+
+/* Navbar-box */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    justify-content: space-between;
+}
+
+#title{
+    display: flex;
+    align-items: center;
+}
+
+/* navbar-img */
+#navbar img{
+    width: 95px;
+    height: 80px;
+    margin-left :20px;
+    mix-blend-mode: color-burn;
+}
+
+#navbar img:hover{cursor:pointer;}
+
+/* navbar-title */
+#title div{
+    color: white;
+    font-family: var(--nav-title-font);
+    font-size: 2.0rem;
+}
+
+#title div:hover{cursor:pointer;}
+
+/* navbar-links-item-container */
+#navbar ul{
+    display:flex;
+    list-style-type: none;
+    margin: auto;
+    flex-wrap:wrap;
+    padding: 0;
+    justify-content: center;
+}
+
+/* navbar-links-item-container */
+#navbar ul li{
+    font-size: 1.5rem;
+
+}
+
+/* navbar-link-item */
+#navbar ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: var(--prim-font);
+    padding: 0px 50px;
+}
+
+#navbar ul li a:hover{
+    text-decoration: underline;
+}
+
+/*  NAVBAR ENDS  */
+
+/*  BODY  */
+.pop-show-container{
+    background-color: var(--prim-color);
+    padding-top: 5px;
+
+}
+
+#pop-show-heading{
+    text-align: center;
+    font-size: 40px;
+    font-family: var(--prim-font);
+    color:var(--text-color);
+    font-weight: bolder;
+    display: block;
+    margin-top: 20px;
+}
+
+/* The Horizontal ruler*/
+#pop-show-heading-divider{
+    border:2px solid #AAAAAA;
+    background-color:var(--text-color);
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+/* INFO OF SHOW */
+
+.title_container {
+    display: flex;
+    margin: 0 80px; /* 80px margin on both sides */
+    align-items: center; /* Vertically align content */
+  }
+  
+  .pop-show-image {
+    margin-right: 20px; /* Add some space between the image and description */
+  }
+  
+  .pop-show-image img {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 10px;
+  }
+  
+  .description {
+    flex: 1; /* Allow the description to take up the remaining space */
+    margin-left: 10px;
+    color: var(--text-color);
+  }
+  
+  .description-container {
+    margin-bottom: 10px; /* Add spacing between description items */
+  }
+  
+  /* Style for the strong elements inside the description */
+  .description-container strong {
+    font-weight: bold;
+  }
+  
+
+
+/* Seasons */
+.pop-show-season{
+    color: var(--text-color);
+}
+
+#pop-season-heading{
+    font-size: 20px;
+    font-family: var(--prim-font);
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 80px;
+}
+.pop-show-season-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  
+  /* Style for each individual season image and information */
+  .pop-show-season-image {
+    flex: 0 1 calc(20% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style for the season image */
+  .pop-show-season-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Style for the season title */
+  .pop-show-season-title {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Style for the buttons */
+  .button-style {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Customize button colors using CSS variables */
+  .button-style[style*="--color"] {
+    --button-color: var(--color);
+    background-color: var(--button-color);
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-style[style*="--color"]:hover {
+    background-color: darken(var(--button-color), 10%);
+  }
+/* Container to hold all the season images and information */
+.pop-show-season-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Style for each individual season image and information */
+  .pop-show-season-image {
+    flex: 0 1 calc(20% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style for the season image */
+  .pop-show-season-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style for the season title */
+  .pop-show-season-title {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Style for the buttons */
+  .button-style {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Customize button colors using CSS variables */
+  .button-style[style*="--color"] {
+    --button-color: var(--color);
+    background-color: var(--button-color);
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-style[style*="--color"]:hover {
+    background-color: darken(var(--button-color), 10%);
+  }
+  
+
+
+
+
+/* Button Styles */ 
+.button-style {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding: 0.75rem 1.5rem;
+    transition: 0.5s;
+  }
+  
+  .button-style:hover {
+    letter-spacing: 0.25rem;
+    background: var(--color);
+    color: var(--color);
+    box-shadow: 0 0 35px var(--color);
+  }
+  
+  .button-style::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+  }
+  
+  .button-style span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button-style i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  .button-style i::before {
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--color);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+  }
+  
+  .button-style:hover i::before {
+    left: 20%;
+    width: 20px;
+  }
+  
+  .button-style i::after {
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--color);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+  }
+  
+  .button-style:hover i::after {
+    left: 80%;
+    width: 20px;
+  }
+
+/*  SEASON END  */
+
+/* CAST AND IMAGES */
+
+.pop-show-cast{
+    color:var(--text-color);
+}
+
+#pop-cast-heading{
+    font-size: 20px;
+    font-family: var(--prim-font);
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 80px;
+}
+
+.pop-show-cast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+.pop-show-cast-image {
+    flex: 0 1 calc(20% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .pop-show-cast-image img {
+    width: 250px;
+    height: 370px;
+    border-radius: 10px;
+  }
+  
+  .pop-show-cast-title {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  /* CAST */
+#pop-images-heading{
+    font-size: 20px;
+    font-family: var(--prim-font);
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 80px;
+  }
+  
+  .pop-show-screenshots-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+  .pop-show-screenshots-image{
+    flex: 0 1 calc(20% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .pop-show-screenshots-image img {
+    width:250px;
+    border-radius: 10px;
+  }
+
+  #pop-image-heading{
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  /* SCREENSHOTS*/
+
+  /* FOOTER */
+
+footer{
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    width:100%;
+}
+
+footer img{
+    height:50px;
+    width: 50px;
+    margin-left: 20px;
+    aspect-ratio: 3/2;
+    object-fit:contain;
+    mix-blend-mode: color-burn;
+}
+
+footer div{
+    color: white;
+    font-family:var(--nav-title-font);
+    font-size: 1.5rem;
+}
+
+footer img,footer div:hover{
+    cursor: pointer;
+}
+
+footer ul{
+    display:flex;
+    list-style: none;
+    margin-left: 100px;
+}
+
+footer ul li{
+    padding : 0px 20px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color:white;
+    font-family: var(--prim-font);
+    font-weight: bold;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+/*MEDIA QUERY*/
+@media screen and (max-width:1135px) {
+  #navbar{
+      flex-direction:column;
+      height: auto;
+  }
+
+  #title{
+      position: relative;
+      right:150px;
+  }
+  
+  #navbar ul li a{
+      padding:0px 20px;
+  }
+}
+
+  @media screen and (max-width:730px) {
+    .misc-links{
+        margin-left:5px;
+    }
+
+    .misc-links li a{
+        font-size:10px;
+    }
+}
+
+@media screen and (max-width:480px){
+
+  #navbar ul li{
+      font-size:1rem;
+  }
+}
+
+  @media screen and (max-width:390px){
+
+    #navbar img{
+        width: 80px;
+        height: 60px;
+        margin-left :10px;
+    }
+
+    footer img{
+      margin-left:0px;
+      height:40px;
+      width:30px;
+  }
+
+  footer div{
+      font-size:1rem;
+  }
+
+  .plans-container{
+      margin:10px 0px;
+      padding: 15px 30px;
+      width:280px;
+  }
+
+ }

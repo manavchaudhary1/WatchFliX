@@ -398,7 +398,11 @@ footer ul li a:hover{
 
 @media screen and (max-width:390px){
 
-    #navbar img{}
+    #navbar img{
+        width: 80px;
+        height: 60px;
+        margin-left :10px;
+    }
 
 
     .popshow-titles-container div img{
